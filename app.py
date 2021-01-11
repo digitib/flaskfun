@@ -26,7 +26,7 @@ def too_large(e):
 def index():
     files = os.listdir(app.config['UPLOAD_PATH'])
     print("files:"+str(files))
-    return render_template("index.html", files=files)
+    return render_template("flaskfun/templates/index.html", files=files)
 
 @app.route('/', methods=['POST'])
 def upload_files():
